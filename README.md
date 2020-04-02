@@ -1,47 +1,30 @@
-React 本を読んだ際の開発環境
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
-# .vscode
+## Getting Started
 
-ワークスペース上で設定しようとおもったけど、github で vscode の設定をあげておいたほうがよさそうなんだね
-https://github.com/oukayuka/ReactBeginnersBook-2.0/blob/master/06-lint/03-mysetting/.vscode/settings.json
+First, run the development server:
 
-# Eslint
-
-```
-yarn add -D eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
-```
-
-# eslint-config
-
-Eslint の設定もそのまま使用させていただく
-https://github.com/oukayuka/ReactBeginnersBook-2.0/blob/master/06-lint/03-mysetting/.eslintrc.js
-
-semi だけ不要にした
-
-# Prettier etc..
-
-Prettier だったり stylelint だったり
-
-```
-yarn add -D eslint-config-airbnb eslint-config-prettier eslint-plugin-import  eslint-plugin-jest eslint-plugin-jsx-a11y eslint-plugin-prefer-arrow eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier prettier-stylelint stylelint stylelint-config-prettier stylelint-config-standard stylelint-order prettier-stylelint husky lint-staged
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-package.json にも prettier の設定だったり、commit 時に整形等もいれる
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint --fix",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "bracketSpacing": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  }
-```
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on ZEIT Now
+
+The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
