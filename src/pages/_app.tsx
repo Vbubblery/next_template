@@ -1,9 +1,17 @@
 // import App from 'next/app'
-import React from 'react';
-import '../tailwind.css';
+import '../assets/tailwind.css';
+import Head from 'next/head';
 
 const MyApp = ({ Component, pageProps }: any) => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 };
 
 // Only uncomment this method if you have blocking data requirements for
